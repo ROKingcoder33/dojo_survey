@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2 text-center mt-5">DOJO SURVEY</h1>
+        <form action="/result" method="post">
+            <div class="form-group">
+                <label for="fullName">Your Name</label>
+                <input type="text" id="fullName" class="form-control" name='name' value='' placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <label for="theLocation" >Dojo Location</label>
+                <select class="form-control" name="location" id="theLocation">
+                    <option value="Washington DC">Washington DC</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="theLanguage" >Favorite Language</label>
+                <select class="form-control" name="language" id="theLanguage">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="theComments">Comment (optional)</label>
+                <textarea name="comments" id="theComments" cols="125" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success" value="Submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

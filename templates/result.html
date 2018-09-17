@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <title>Dojo Survey Complete</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4 text-primary mt-4"><u>Submitted Info</u></h1>
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td>Name:</td>
+                    <td>{{ request.form['name'] }}</td>
+                </tr>
+                <tr>
+                    <td>Dojo Location:</td>
+                    <td>{{ request.form['location'] }}</td>
+                </tr>
+                <tr>
+                    <td>Favorite Language:</td>
+                    <td>{{ request.form['language'] }}</td>
+                </tr>
+                <tr>
+                    <td>Comment:</td>
+                    <td>{{ request.form['comments'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="/" method="get">
+            <button type="submit" value="Go Home" class="btn btn-success">Go Back</button>
+        </form>
+    </div>
+</body>
+</html>
